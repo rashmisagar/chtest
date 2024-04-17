@@ -28,6 +28,12 @@ For each performance testing type, I defined specific test scenarios to cover di
    - Simulate concurrent user sessions accessing different pages of the website.
    - Measure response times, throughput, and resource utilization.
 
+To write a performance test script for the given scenarios using JMeter, I set up a test plan in JMeter as below:
+
+- Define the number of users (threads) that will simulate concurrent sessions. For e.g, the test plan script `load_test_1.xml` simulates 10 users accessing the website.
+- Define the pages of the website that will be accessed, and add additional HTTPSamplerProxy elements for each page to be tested.
+- To measure response times, throughput, and resource utilization, I would add listeners to the test plan. For example, add a SummaryReport and a ViewResultsTree to view detailed results of the test.
+
 2. Stress Testing Scenarios:
    - Generate a high number of concurrent requests to stress the website's resources.
    - Monitor system metrics and identify performance bottlenecks.
