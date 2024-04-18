@@ -36,11 +36,3 @@ Below I have outlined the process of running a security scan against https://aut
 6. **Remediate the vulnerabilities**: Work with the development and security teams to address the identified vulnerabilities. This may involve applying patches, fixing code issues, or implementing security best practices.
 
 7. **Re-scan and validate**: After the remediation, perform another security scan to ensure that the vulnerabilities have been successfully mitigated.
-
-## Initial Inspection
-The initial inspection of https://automationintesting.online/, will identify the following potential problems:
-- Insecure communication: To identify if the website enforces secure connections, HTTPS instead of HTTP, which may expose sensitive user data to potential attackers.
-- Lack of input validation: To investigate if the website appears to have user input fields that may be vulnerable to injection attacks.
-- Missing security headers: To identify if the website have certain security headers, such as Content Security Policy (CSP) and HTTP Strict Transport Security (HSTS), which can help protect against various attacks.
-
-Please note that after this initial inspection, a further detailed analysis is required during the security scan.
