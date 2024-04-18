@@ -5,9 +5,11 @@ Below I have outlined the process of running a security scan against https://aut
 
 ## Process
 1. **Identify the scope**: This will determine the specific areas of the website that will be included in the security scan. This may include the main website, subdomains, APIs, etc.
-2. **Initial Inspection**:
-   - Visit the website "https://automationintesting.online/" to understand its functionality, structure, and potential vulnerabilities.
-   - Inspect the page source to identify any obvious security flaws such as unsecured connections (HTTP instead of HTTPS), outdated libraries or frameworks, or sensitive information exposure.
+2. **Initial Inspection**: The initial inspection of https://automationintesting.online/, will identify the following potential problems:
+   - Insecure communication: To identify if the website enforces secure connections, HTTPS instead of HTTP, which may expose sensitive user data to potential attackers.
+   - Lack of input validation: To investigate if the website appears to have user input fields that may be vulnerable to injection attacks.
+   - Missing security headers: To identify if the website have certain security headers, such as Content Security Policy (CSP) and HTTP Strict Transport Security (HSTS), which can help protect against various attacks.
+
 
 3. **Select the scanning tool**: Then I will choose a suitable security scanning tool based on the requirements and the type of vulnerabilities to be tested. Some popular tools include:
    - [OWASP ZAP](https://www.zaproxy.org/)
