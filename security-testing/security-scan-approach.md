@@ -5,21 +5,35 @@ Below I have outlined the process of running a security scan against https://aut
 
 ## Process
 1. **Identify the scope**: This will determine the specific areas of the website that will be included in the security scan. This may include the main website, subdomains, APIs, etc.
+2. **Initial Inspection**:
+   - Visit the website "https://automationintesting.online/" to understand its functionality, structure, and potential vulnerabilities.
+   - Inspect the page source to identify any obvious security flaws such as unsecured connections (HTTP instead of HTTPS), outdated libraries or frameworks, or sensitive information exposure.
 
-2. **Select the scanning tool**: Then I will choose a suitable security scanning tool based on the requirements and the type of vulnerabilities to be tested. Some popular tools include:
+3. **Select the scanning tool**: Then I will choose a suitable security scanning tool based on the requirements and the type of vulnerabilities to be tested. Some popular tools include:
    - [OWASP ZAP](https://www.zaproxy.org/)
    - [Nessus](https://www.tenable.com/products/nessus)
    - [Burp Suite](https://portswigger.net/burp)
 
 3. **Configure the scanning tool**: This step will set up the scanning tool with the necessary configurations, such as target URL, authentication credentials (if required), and scan policies.
 
-4. **Perform the scan**: This initiates the security scan using the selected tool. This may involve crawling the website, identifying vulnerabilities, and generating a report.
+4. **Perform the scan**: This initiates the security scan using the selected tool.
+   - Manual Inspection:
+      * Conduct a manual inspection of the website, focusing on areas that automated tools might overlook:
+      * Check for Cross-Site Scripting (XSS) vulnerabilities by attempting to inject script code into input fields.
+      * Test for SQL Injection vulnerabilities by manipulating URL parameters and form inputs.
+      * Look for insecure direct object references by manipulating URLs to access unauthorized resources.
+      * Examine the website's cookies for any sensitive information being stored insecurely.
+      * Inspect the HTTP headers for security-related headers such as Content-Security-Policy (CSP), X-Content-Type-Options, etc.
+      * Analyze server responses for potential information disclosure or error messages that could aid attackers.
+   - Penetration Testing:
+      * Conduct targeted penetration testing to simulate real-world attacks and assess the website's resilience against them.
+      * Use tools like Burp Suite to intercept and manipulate web traffic, test for vulnerabilities, and analyze server responses.
 
-5. **Analyze the results**: Then I will review the scan results and prioritize the identified vulnerabilities based on their severity and potential impact.
+5. **Analyze the results**: Then review the scan results and prioritize the identified vulnerabilities based on their severity and potential impact.
 
-6. **Remediate the vulnerabilities**: I will then work with the development and security teams to address the identified vulnerabilities. This may involve applying patches, fixing code issues, or implementing security best practices.
+6. **Remediate the vulnerabilities**: Work with the development and security teams to address the identified vulnerabilities. This may involve applying patches, fixing code issues, or implementing security best practices.
 
-7. **Re-scan and validate**: After the remediation, I will perform another security scan to ensure that the vulnerabilities have been successfully mitigated.
+7. **Re-scan and validate**: After the remediation, perform another security scan to ensure that the vulnerabilities have been successfully mitigated.
 
 ## Initial Inspection
 The initial inspection of https://automationintesting.online/, will identify the following potential problems:
