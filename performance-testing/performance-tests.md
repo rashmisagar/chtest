@@ -38,9 +38,15 @@ To write a performance test script for the given scenarios using JMeter, I set u
    - Generate a high number of concurrent requests to stress the website's resources.
    - Monitor system metrics and identify performance bottlenecks.
 
+   The example script `stress_test_1.scala` will generate 1000 users at once, each making 1000 GET requests to the homepage of `https://automationintesting.online/` with a 1-second pause between each request.
+
 3. Endurance Testing Scenarios:
    - Run a continuous load on the website for an extended duration.
    - Monitor memory usage, CPU utilization, and database performance.
+
+   The script `endurance_test_1.py` will generate users that wait between 1 and 5 seconds (this simulates real-world users who don't hammer the server non-stop) and then make a GET request to the homepage of https://automationintesting.online/.
+
+   To run the script, run locust -f endurance_test_1.py from the command line. Then open a web browser to http://localhost:8089 to start the test and set the number of users and spawn rate.
 
 ## Test Execution
 The performance testing scripts will be executed in a controlled test environment that closely resembles the production environment. The execution process will involve:
