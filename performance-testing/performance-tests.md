@@ -60,6 +60,4 @@ The performance testing scripts will be executed in a controlled test environmen
    - Analyze the collected performance metrics to identify any performance issues or bottlenecks.
    - Generate performance reports with detailed findings and recommendations.
 
-## Summary
-By following this performance testing approach, I aim to gain insights into the performance characteristics of the 'https://automationintesting.online/' website and identify any areas for improvement. The results of the performance tests will help in optimizing the website's performance and ensuring a better user experience.
 
